@@ -8,14 +8,17 @@ import java.util.Properties;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
+import android.pageObjects.FormPage;
 import android.utils.AppiumUtils;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 
 public class BaseTest extends AppiumUtils{
+	
 	public AndroidDriver driver;
 	public AppiumDriverLocalService appium;
+	public FormPage formPage;
 	
 	@BeforeClass(alwaysRun = true)
 	public void configureAppium() throws IOException {
