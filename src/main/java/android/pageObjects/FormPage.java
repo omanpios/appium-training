@@ -33,7 +33,7 @@ public class FormPage extends AndroidActions {
 		return countryLabel.getText();
 	}
 
-	@AndroidFindBy(id = "com.androidsample.generalstore:id/spinnerCountry")
+	@AndroidFindBy(id = "android:id/text1")
 	private WebElement countryDropDown;
 
 	public void setCountry(String country) {
@@ -77,4 +77,17 @@ public class FormPage extends AndroidActions {
 	public void clickLetsShopButton() {
 		letsShopButton.click();
 	}	
+	
+	public String selectedCountry() {
+		return countryDropDown.getText();
+				
+	}
+	
+	public String isMaleSelected() {
+		return maleOption.getAttribute("checked");
+	}
+	
+	public String isFemaleSelected() {
+		return femaleOption.getAttribute("checked");
+	}
 }
